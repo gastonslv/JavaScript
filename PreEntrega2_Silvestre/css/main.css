@@ -66,9 +66,33 @@ main #calculadora #seccion_botones #btnNone4 {
 }
 main #calculadora #seccion_botones #btn_AC {
   grid-area: AC;
+  background-color: lightcoral;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+}
+main #calculadora #seccion_botones #btn_AC:hover {
+  background-color: grey;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+main #calculadora #seccion_botones #btn_AC:active {
+  background-color: rgb(88, 88, 88);
+  transition: background-color 0.15s ease;
 }
 main #calculadora #seccion_botones #btn_C {
   grid-area: C;
+  background-color: lightcoral;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+}
+main #calculadora #seccion_botones #btn_C:hover {
+  background-color: grey;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+main #calculadora #seccion_botones #btn_C:active {
+  background-color: rgb(88, 88, 88);
+  transition: background-color 0.15s ease;
 }
 main #calculadora #seccion_botones #btn_mas_menos {
   grid-area: m_m;
@@ -125,7 +149,17 @@ main #calculadora #seccion_botones #btn_suma {
   grid-area: "mas";
 }
 main #calculadora #seccion_botones .btn {
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
+}
+main #calculadora #seccion_botones .btn:hover {
+  background-color: grey;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+main #calculadora #seccion_botones .btn:active {
+  background-color: rgb(88, 88, 88);
+  transition: background-color 0.15s ease;
 }
 
 /*# sourceMappingURL=main.css.map */

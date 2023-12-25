@@ -3,3 +3,121 @@
     width: $w;
 }
 
+@mixin efectoBoton() {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    
+    &:hover {
+        background-color: grey;
+        transition: background-color 0.15s ease;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: rgb(88, 88, 88);
+        transition: background-color 0.15s ease;
+    }
+}
+
+@mixin propiedades-botones() {
+    #btnNone1 {
+        grid-area: n;
+    }
+
+    #btnNone2 {
+        grid-area: n2;
+    }
+    
+    #btnNone3 {
+        grid-area: n3;
+    }
+    
+    #btnNone4 {
+        grid-area: n4;
+    }
+
+    #btn_AC {
+        grid-area: AC;
+        background-color: lightcoral;
+
+        @include efectoBoton();
+    }
+    
+    #btn_C {
+        grid-area: C;
+        background-color: lightcoral;
+
+        @include efectoBoton();
+    }
+    
+    #btn_mas_menos {
+        grid-area: m_m;
+    }
+    
+    #btn_mod {
+        grid-area: mod;
+    }
+
+    #btn_7 {
+        grid-area: '7';
+    }
+
+    #btn_8 {
+        grid-area: '8';
+    }
+
+    #btn_9 {
+        grid-area: '9';
+    }
+
+    #btn_div {
+        grid-area: div;
+    }
+
+    #btn_4 {
+        grid-area: '4';
+    }
+    
+    #btn_5 {
+        grid-area: '5';
+    }
+    
+    #btn_6 {
+        grid-area: '6';
+    }
+    
+    #btn_x {
+        grid-area: 'x';
+    }
+
+    #btn_1 {
+        grid-area: '1';
+    }
+
+    #btn_2 {
+        grid-area: '2';
+    }
+
+    #btn_3 {
+        grid-area: '3';
+    }
+
+    #btn_resta {
+        grid-area: '-';
+    }
+
+    #btn_0 {
+        grid-area: '0';
+    }
+    
+    #btn_coma {
+        grid-area: 'coma';
+    }
+    
+    #btn_igual {
+        grid-area: 'igual';
+    }
+    
+    #btn_suma {
+        grid-area: 'mas';
+    }
+}
