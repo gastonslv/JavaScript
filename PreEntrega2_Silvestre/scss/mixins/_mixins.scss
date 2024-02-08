@@ -1,0 +1,38 @@
+@mixin height-width($h: auto, $w: auto) {
+    height: $h;
+    width: $w;
+}
+
+@mixin card() {
+    @include height-width(400px, 90vw);
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 2% 96% 2%;
+    grid-template-rows: 2% 55% 10.5% 30.5% 2%;
+    grid-template-areas:
+    ". . ."
+    ". photo ."
+    ". title ."
+    ". text ."
+    ". . .";
+    
+    .card-img {
+        grid-area: photo;
+
+    }
+
+    .card-title {
+        grid-area: title;
+        text-align: start;
+
+    }
+
+    .card-description {
+        grid-area: text;
+        text-align: justify;
+    }
+}
