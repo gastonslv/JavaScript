@@ -9,12 +9,37 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #EBEBEB;
   height: auto;
-  width: 100vw;
+  width: 100%;
 }
 body header {
-  height: 20vh;
+  height: 16vh;
   width: 100%;
   background-color: #F5CD14;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 100%;
+  grid-template-areas: "logo menu";
+  justify-items: center;
+  align-items: center;
+}
+body header #dropdownMenu {
+  display: none;
+}
+body header #dropdownMenu:checked + h1 + label + #menu {
+  top: 0%;
+  transition: top 0.2s ease;
+}
+body header h1 {
+  grid-area: logo;
+  color: #006738;
+  display: inline-block;
+}
+body header h1 p {
+  display: inline-block;
+  font-size: 0.5em;
+}
+body header i {
+  grid-area: menu;
 }
 body main {
   height: auto;
@@ -24,27 +49,26 @@ body main {
   align-items: center;
 }
 body main .card {
-  height: 400px;
-  width: 90vw;
+  height: auto;
+  width: 95%;
   background-color: #FFFFFF;
   margin-top: 10px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: 2% 96% 2%;
-  grid-template-rows: 2% 55% 10.5% 30.5% 2%;
-  grid-template-areas: ". . ." ". photo ." ". title ." ". text ." ". . .";
+  row-gap: 10px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 body main .card .card-img {
-  grid-area: photo;
-}
-body main .card .card-title {
-  grid-area: title;
-  text-align: start;
+  height: 200px;
+  width: auto;
+  background-color: lightgray;
+  border-radius: 7px;
 }
 body main .card .card-description {
-  grid-area: text;
-  text-align: justify;
+  flex-grow: 1;
 }
 body footer {
   height: 20vh;
@@ -53,7 +77,7 @@ body footer {
   background-color: #006738;
   color: #FFFFFF;
   font-weight: 300;
-  font-size: 0.9em;
+  font-size: 0.8em;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -4,35 +4,27 @@
 }
 
 @mixin card() {
-    @include height-width(400px, 90vw);
+    @include height-width(auto, 95%);
     background-color: #FFFFFF;
     margin-top: 10px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 
-    display: grid;
-    grid-template-columns: 2% 96% 2%;
-    grid-template-rows: 2% 55% 10.5% 30.5% 2%;
-    grid-template-areas:
-    ". . ."
-    ". photo ."
-    ". title ."
-    ". text ."
-    ". . .";
-    
+    row-gap: 10px;
+    padding: 7px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     .card-img {
-        grid-area: photo;
-
-    }
-
-    .card-title {
-        grid-area: title;
-        text-align: start;
-
+        @include height-width(200px, auto );
+        background-color: lightgray;
+        border-radius: 7px;
     }
 
     .card-description {
-        grid-area: text;
-        text-align: justify;
+
+        flex-grow: 1; // the text can grow
     }
 }
