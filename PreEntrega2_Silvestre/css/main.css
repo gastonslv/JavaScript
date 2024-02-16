@@ -26,8 +26,8 @@ body header #dropdownMenu {
   display: none;
 }
 body header #dropdownMenu:checked + h1 + label + #menu {
-  top: 0%;
-  transition: top 0.2s ease;
+  right: 0%;
+  transition: right 0.2s ease;
 }
 body header h1 {
   grid-area: logo;
@@ -38,8 +38,34 @@ body header h1 p {
   display: inline-block;
   font-size: 0.5em;
 }
-body header i {
+body header label i {
   grid-area: menu;
+  z-index: 9;
+}
+body header #menu {
+  height: 100vh;
+  width: 100vw;
+  background-color: #F5CD14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0%;
+  right: -100%;
+  transition: right 0.2s ease;
+}
+body header #menu ul {
+  height: 30vh;
+  width: 80vw;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body header #menu ul li {
+  color: #006738;
 }
 body main {
   height: auto;

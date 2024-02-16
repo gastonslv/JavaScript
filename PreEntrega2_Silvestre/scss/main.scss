@@ -29,8 +29,8 @@ body {
             display: none;
 
             &:checked + h1 + label + #menu {
-                top: 0%;
-                transition: top 0.2s ease;
+                right: 0%;
+                transition: right 0.2s ease;
             }
         }
 
@@ -44,19 +44,42 @@ body {
             }
         }
 
-        i {
-            grid-area: menu;
+        label {
+            i {
+                grid-area: menu;
+                z-index: 9;
+            }
         }
+
 
         #menu {
-            // @include height-width(100vh, 100vw);
-            // z-index: 10;
-            // top: -100%;
-            // background-color: $primary-color;
-            
-        }
+            @include height-width(100vh, 100vw);
+            background-color: $primary-color;
 
-        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: fixed;
+            z-index: 10;
+            top: 0%;
+            right: -100%;
+            transition: right 0.2s ease;
+
+            ul {
+                @include height-width(30vh, 80vw);
+                list-style: none;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                li {
+                    color: $secondary-color;
+                }
+            }
+        } 
     }
 
     main {
